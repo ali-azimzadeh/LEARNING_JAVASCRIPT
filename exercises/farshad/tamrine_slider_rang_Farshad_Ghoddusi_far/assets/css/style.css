@@ -1,0 +1,28 @@
+.container {
+    width: 50%;
+    margin: 60px auto;
+}
+
+#colorValues {
+    border: 2px solid black;
+    width: 20%;
+    margin-top: 40px;
+    float: left;
+}
+
+.myNumbers {
+    margin-left: 10px;
+}
+
+#colorBox {
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+.clearfix {
+    clear: both;
+}

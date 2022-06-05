@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="main1"></p>
+    <button onclick="mysort()">please sort me!!!!</button>
+    <script>
+        const students = [{ firstName: "ali", age: 30 }, { firstName: "reza", age: 22 }, { firstName: "ahmad", age: 41 }, { firstName: "leila", age: 25 }];
+
+        let x = students[0].firstName;
+        let y = students[1].firstName;
+        let z = students[2].firstName;
+        let T = [x, y, z];
+        document.getElementById("main1").innerHTML = T;
+
+        function mysort() {
+
+            T.sort();
+            document.getElementById("main1").innerHTML = T;
+        };
+
+    </script>
+
+</body>
+
+</html>

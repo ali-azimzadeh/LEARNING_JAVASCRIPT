@@ -1,0 +1,498 @@
+<!-- *************************************************** -->
+<!-- how to use for statement JavaScript -->
+<!-- *************************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Loop</h2>
+
+    <p id="id1"></p>
+
+    <script>
+        let text = "";
+
+        for (let i = 0; i < 5; i++) {
+
+            text += "The number is " + i + "<br>";
+        }
+
+        document.getElementById("id1")
+            .innerHTML = text;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- **************************************************************** -->
+<!-- how to use many variable in first statement of for in JavaScript -->
+<!-- **************************************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Loop</h2>
+
+    <p id="id2"></p>
+
+    <script>
+        const cars2 =
+            ["BMW", "Volvo", "Saab", "Ford"];
+
+        let i, len, text2;
+
+        for (i = 0, len = cars2.length, text2 = ""; i < len; i++) {
+
+            text2 += cars2[i] + "<br>";
+        }
+
+        document.getElementById("id2")
+            .innerHTML = text2;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************************* -->
+<!-- how to use for without first statement JavaScript -->
+<!-- ************************************************* -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Loop</h2>
+
+    <p id="id3"></p>
+
+    <script>
+        const cars3 =
+            ["BMW", "Volvo", "Saab", "Ford"];
+
+        let i3 = 2;
+
+        let len3 = cars3.length;
+
+        let text3 = "";
+
+        for (; ; i3++) {
+
+            text3 += cars3[i3] + "<br>";
+
+            if(i3 >= len3){
+                break;
+            }
+            
+        }
+
+        document.getElementById("id3")
+            .innerHTML = text3;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************************* -->
+<!-- how to use for without first statement JavaScript -->
+<!-- ************************************************* -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Loop</h2>
+
+    <p id="id4"></p>
+
+    <script>
+        const cars4 =
+            ["BMW", "Volvo", "Saab", "Ford"];
+
+        let i4 = 0;
+
+        let len4 = cars4.length;
+
+        let text4 = "";
+
+        for (; i4 < len4;) {
+
+            text4 += cars4[i4] + "<br>";
+
+            i4++;
+        }
+
+        document.getElementById("id4")
+            .innerHTML = text4;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- *********************************************** -->
+<!-- how to use var statement in for loop JavaScript -->
+<!-- *********************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript let</h2>
+
+    <p id="id5"></p>
+
+    <script>
+        var i5 = 5;
+
+        for (var i5 = 0; i5 < 10; i5++) {
+            // some statements
+        }
+
+        document.getElementById("id5")
+            .innerHTML = i5;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- *********************************************** -->
+<!-- how to use let statement in for loop JavaScript -->
+<!-- *********************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript let</h2>
+
+    <p id="id6"></p>
+
+    <script>
+        let i6 = 5;
+
+        for (let i6 = 0; i6 < 10; i6++) {
+
+            // some statements
+        }
+
+        document.getElementById("id6")
+            .innerHTML = i6;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************** -->
+<!-- how to use for / in loop in JavaScript -->
+<!-- ************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For In Loop</h2>
+    <p>The for in statement loops through the properties of an object:</p>
+
+    <p id="id7"></p>
+
+    <script>
+        const person7 =
+            { fname: "Hadi", lname: "Ahmadi", age: 35 };
+
+        let txt7 = "";
+
+        for (let x in person7) {
+
+            txt7 += person7[x] + " ";
+        }
+
+        document.getElementById("id7")
+            .innerHTML = txt7;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************** -->
+<!-- how to use for / in loop in JavaScript -->
+<!-- ************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For In</h2>
+    <p>The for in statement can loops over array values:</p>
+
+    <p id="id8"></p>
+
+    <script>
+        const numbers8 = [45, 4, 9, 16, 25];
+
+        let txt8 = "";
+
+        for (let x8 in numbers8) {
+        
+            txt8 += numbers8[x8] + "<br>";
+        }
+
+         document.getElementById("id8")
+             .innerHTML = txt8;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************** -->
+<!-- how to use for / of loop in JavaScript -->
+<!-- ************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Of Loop</h2>
+    <p>The for of statement loops through the values of any iterable object:</p>
+
+    <p id="id9"></p>
+
+    <script>
+        const cars9 =
+            ["BMW", "Volvo", "Mini"];
+
+        let text9 = "";
+
+        for (let x9 of cars9) {
+
+            text9 += x9 + "<br>";
+        }
+
+        document.getElementById("id9")
+            .innerHTML = text9;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************************** -->
+<!-- how to use for / of loop for strings in JavaScript -->
+<!-- ************************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Of Loop</h2>
+
+    <p>The for of statement loops through the values of an iterable object.</p>
+
+    <p id="id10"></p>
+
+    <script>
+        let language = "JavaScript";
+
+        let text10 = "";
+
+        for (let x of language) {
+
+            text10 += x + "<br>";
+        }
+
+        // for (let x in language) {
+
+        //     text10 += x + "<br>";
+        // }
+
+        document.getElementById("id10")
+            .innerHTML = text10;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- *********************************** -->
+<!-- how to use while loop in JavaScript -->
+<!-- *********************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript While Loop</h2>
+
+    <p id="id11"></p>
+
+    <script>
+        let text11 = "";
+
+        let i11 = 0;
+
+        while (i11 < 10) {
+
+            text11 += "<br>The number is " + i11;
+
+            i11++;
+        }
+
+        document.getElementById("id11")
+            .innerHTML = text11;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- *********************************** -->
+<!-- how to use while loop in JavaScript -->
+<!-- *********************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Do While Loop</h2>
+
+    <p id="id12"></p>
+
+    <script>
+        let text12 = ""
+
+        let i12 = 0;
+
+        do {
+            text12 += "<br>The number is " + i12;
+
+            i12++;
+        }
+        while (i12 < 10);
+
+        document.getElementById("id12")
+            .innerHTML = text12;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************************ -->
+<!-- how to use break statement in loop in JavaScript -->
+<!-- ************************************************ -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Loops</h2>
+
+    <p>A loop with a <b>break</b> statement.</p>
+
+    <p id="id13"></p>
+
+    <script>
+        let text13 = "";
+
+        for (let i13 = 0; i13 < 10; i13++) {
+
+            if (i13 === 3) {
+                break;
+            }
+
+            text13 += "The number is " + i13 + "<br>";
+        }
+
+        document.getElementById("id13")
+            .innerHTML = text13;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************************ -->
+<!-- how to use continue statement in loop in JavaScript -->
+<!-- ************************************************ -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Loops</h2>
+
+    <p>A loop with a <b>continue</b> statement.</p>
+
+    <p>A loop which will skip the step where i = 3.</p>
+
+    <p id="id14"></p>
+
+    <script>
+        let text14 = 10;
+        let i=10;
+
+        // for (let i14 = 0; i14 < 10; i14++) {
+
+        //     if (i14 === 3) {
+        //          continue;
+        //          }
+
+        //     text14 += "The number is " + i14 + "<br>";
+        // }
+
+        document.getElementById("id14")
+            .innerHTML = (text14 == i) ? "ok":"nok";
+    </script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- my Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css.map">
+
+</head>
+
+<body CLASS="container text-center bg-color:light">
+
+    <section>
+
+        <h1 class="my-4">Use Buttons to Sort the Array by Age and Name</h1>
+
+        <h3><span class="text-warning">Tip: </span>Odd Number of Clicks will Sort the Table Ascending <br/> and Even Number of Clicks will Sort the Table Descending</h3>
+
+        <div class="row my-3">
+
+            <div class="col-md-4">
+
+                <table class="table my-4">
+
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+
+                            <th scope="col">First Name</th>
+
+                            <th scope="col">Age</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">1</th>
+
+                            <td>ali</td>
+
+                            <td>30</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">2</th>
+
+                            <td>reza</td>
+
+                            <td>22</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">3</th>
+
+                            <td>ahmad</td>
+
+                            <td>41</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">4</th>
+
+                            <td>leila</td>
+
+                            <td>25</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="col-md-4">
+
+                <table class="table my-4 d-none" id="ageHiddenTable">
+
+                    <caption class="text-center"> Sorted by Age </caption>
+
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+
+                            <th scope="col">First Name</th>
+
+                            <th scope="col">Age</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="sortAge">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <table class="table my-4 d-none" id="nameHiddenTable">
+
+                    <caption class="text-center"> Sorted by First Name </caption>
+
+                    <thead class="thead-dark">
+
+                        <tr>
+                            <th scope="col">#</th>
+
+                            <th scope="col">First Name</th>
+
+                            <th scope="col">Age</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="sortName">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <div class="row my-3">
+
+            <div class="col-md-2 border-primary">
+
+                <button class="btn btn-info" onclick="ageClicked()">
+                                            Sort by Age</button>
+
+            </div>
+
+            <div class="col-md-2">
+
+                <button class="btn btn-success" onclick="nameClicked()">
+                                            Sort by Name</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!-- ***************************-->
+<!-- how to use date JavaScript -->
+<!-- ***************************-->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript new Date()</h2>
+
+    <p id="id1"></p>
+
+    <script>
+
+        const date = new Date();
+
+        document.getElementById("id1").innerHTML = date;
+
+        //با استفاده از این تابع می توانید عدد سال را بدست آورید
+        // document.getElementById("id1").innerHTML =
+        //      date.getFullYear();
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************ -->
+<!-- how to use if statement JavaScript   -->
+<!-- ************************************ -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript if</h2>
+
+    <p>Display "Good day!" if the hour is less than 18:00:</p>
+
+    <p id="id2">Good Evening!</p>
+
+    <script>
+        var min = new Date().getMinutes();
+        debugger;
+        if (min > 3) {
+
+            document.getElementById("id2")
+                .innerHTML = "Good day!";
+        }
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- *************************************** -->
+<!-- how to use if else statement JavaScript -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript if .. else</h2>
+
+    <p>A time-based greeting:</p>
+
+    <p id="id3"></p>
+
+    <script>
+        const hour =
+            new Date().getHours();
+
+        let greeting;
+
+        if (hour > 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+
+        document.getElementById("id3")
+            .innerHTML = greeting;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ******************************************* -->
+<!-- how to use if else if statement JavaScript -->
+<!-- ******************************************* -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript if .. else</h2>
+
+    <p>A time-based greeting:</p>
+
+    <p id="id4"></p>
+
+    <script>
+        const time = new Date().getHours();
+
+        let greeting4;
+
+        if (time < 10) {
+
+            greeting4 = "Good morning";
+
+        } else if (time < 20) {
+
+            greeting4 = "Good day";
+
+        } else {
+
+            greeting4 = "Good evening";
+
+        }
+        document.getElementById("id4")
+            .innerHTML = greeting4;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- *************************************** -->
+<!-- how to use switch statement JavaScript -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript switch</h2>
+
+    <p id="id5"></p>
+
+    <script>
+        let day;
+
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+        }
+        document.getElementById("id5")
+            .innerHTML = "Today is " + day;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- *************************************************** -->
+<!-- how to use switch with default statement JavaScript -->
+<!-- *************************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript switch</h2>
+
+    <p id="id6"></p>
+
+    <script>
+        let text;
+
+        switch (new Date().getDay()) {
+            case 2:
+                text = "Today is Saturday";
+                break;
+            case 0:
+                text = "Today is Sunday";
+                break;
+            default:
+                text = "Looking forward to the Weekend";
+        }
+        document.getElementById("id6")
+            .innerHTML = text;
+    </script>
+
+</body>
+
+</html>
+
+
+/***************************************************************
+
+<!-- *******************************************************************-->
+<!-- how to use common code blocks for switch case statement JavaScript -->
+<!-- *******************************************************************-->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript switch</h2>
+
+    <p id="id7"></p>
+
+    <script>
+        let text7;
+
+        switch (new Date().getDay()) {
+            case 4:
+            case 5:{
+                    text7 = "Soon it is Weekend";
+                    break;
+                }
+            case 0:
+            case 6:
+                {
+                    text7 = "It is Weekend";
+                    break;
+                }
+            default:
+                {
+                    text7 = "Looking forward to the Weekend";
+                }
+        }
+        document.getElementById("id7")
+            .innerHTML = text7;
+    </script>
+
+</body>
+
+</html>
+

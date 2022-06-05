@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+
+</head>
+
+<body>
+
+
+
+    <section class="container">
+
+
+        <h1 class="title">سامانه ثبت نام دانشجو</h1>
+
+        <div class="headerImage">
+
+            <img src="assets/img/Enrollment-Banner-1200x450.jpg" alt="">
+        </div>
+
+
+        <form class="myForm" action="/action_page.php">
+            <fieldset>
+                <legend>مشخصات دانشجو</legend><br>
+
+                <label for="fname">نام:</label>
+                <input type="text" id="fname" name="fname" placeholder="نام"><br><br>
+
+                <label for="lname">نام خانوادگی:</label>
+                <input type="text" id="lname" name="lname" placeholder="نام خانوادگی"><br><br>
+
+
+                <label for="lname">سن:</label>
+                <input type="number" id="age" name="age" min="1" max="100" placeholder="سن"><br><br>
+
+                <button class="myButton1" type="button" id="submit">ثبت</button>
+
+
+            </fieldset>
+        </form>
+
+        <div id="enrolment">Enroll Table</div>
+        <table class="data" id="myEnrollTable">
+            <tr>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th>سن</th>
+                <th>وضعیت</th>
+            </tr>
+        </table>
+
+        <p class="matn">
+            متن و پیغام
+        </p>
+    </section>
+
+
+
+    <script src="assets/js/jQery.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

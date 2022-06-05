@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> کارکنان کارخانه</title>
+
+
+    <link rel="stylesheet" href="assets/css/persianDatepicker-default.css">
+
+
+
+    <script src="assets/js/jquery-1.10.1.min.js"></script>
+
+
+
+    <script src="assets/js/persianDatepicker.js"></script>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- <script src="assets/js/script.js"></script> -->
+
+    <script>
+        $("#elementId, .elementClass").persianDatepicker();
+    </script>
+
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+
+    <!-- <script src="assets/js/script.js"></script> -->
+
+</head>
+
+<body>
+    <fieldset class="border border-success">
+
+        <Legend class="text-success">فرم ثبت کارکنان</Legend>
+
+        <form id="frmPerson" action="#" method="get" class="needs-validation" name="dataForm">
+
+            <div class="form-group" id="firstForm">
+
+
+                <div>
+
+                    <label for="natCode">کد ملی :</label>
+
+                    <span class="divValid">
+
+                        <input type="number" class="form-control " name="natCode" id="natCode" onkeyup="validFunc(this)"
+                            placeholder="کد ملی 10 رقمی را وارد کنید">
+
+                        <label for="natCode" class="validtxt" id="validNat"></label>
+
+                    </span>
+
+
+                </div>
+
+                <div>
+
+                    <label for="firstName">نام :</label>
+
+                    <span class="divValid">
+
+                        <input type="text" class="form-control" onkeyup="validFunc(this)" name="firstName" id="firstName"  >
+
+                        <label for="firstName" class="validtxt" id="validFirstName"></label>
+
+                    </span>
+
+
+                </div>
+
+                <div>
+
+                    <label for="lastName">نام خانوادگی :</label>
+
+                    <span class="divValid">
+
+                        <input type="text" class="form-control" onkeyup="validFunc(this)" name="lastName" id="lastName" >
+
+                        <label for="lastName" class="validtxt" id="validLastName"></label>
+
+                    </span>
+
+                </div>
+
+                <div class="divValid ">
+
+                    <label for="fGender">زن</label>
+                    <input type="radio" name="genderA" id="fGender" checked>
+
+                    <label for="mGender">مرد</label>
+                    <input type="radio" name="genderA" id="mGender">
+
+                    <label for="" class="validtxt gender" id="gender"></label>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="form-group">
+
+                <div>
+
+                    <label for="bDate">تاریخ تولد :</label>
+
+                    <span class="divValid">
+
+                        <input type="text" name="birthDate" class="form-control" id="birthDate"  >
+
+                        <label for="birthDate" class="validtxt" id="validBirthDate"></label>
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <label for="homeTel">تلفن منزل :</label>
+
+                    <span class="divValid">
+
+                        <input type="tel"  class="form-control" name="homeTel" id="homeTel" onkeyup="validFunc(this)" placeholder="021xxxxxxxx">
+
+                        <label for="homeTel" class="validtxt" id="validHomeTel"></label>
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <label for="homeAdd">آدرس منزل :</label>
+
+                    <span class="divValid">
+
+                        <textarea name="homeAdd" class="form-control" id="homeAdd" onkeyup="validFunc(this)" ></textarea>
+
+                        <label for="homeAdd" class="validtxt" id="validHomeAdd"></label>
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+            <div class="form-group">
+
+                <div>
+
+                    <label for="factName">نام کارخانه :</label>
+
+                    <span class="divValid">
+
+                        <input type="text" name="factName" id="factName" class="form-control" onkeyup="validFunc(this)">
+
+                        <label for="factName" class="validtxt" id="validFactName"></label>
+
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <label for="jobTitle">  سمت شغلی:</label>
+
+                    <span class="divValid">
+
+                        <input type="text" name="jobTitle" class="form-control" id="jobTitle" onkeyup="validFunc(this)">
+
+                        <label for="jobTitle" class="validtxt" id="validJobTitle"></label>
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <label for="workPlace">محل خدمت :</label>
+
+                    <span class="divValid">
+
+                        <input type="text" name="workPlace" class="form-control" id="workPlace" onkeyup="validFunc(this)" >
+
+                        <label for="workPlace" class="validtxt" id="validWorkPlace"></label>
+
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <label for="salary">میزان حقوق دریافتی :</label>
+
+                    <span class="divValid">
+
+                        <input type="number" name="salary" class="form-control" id="salary" onkeyup="validFunc(this)">
+
+                        <label for="salary">ریال</label>
+
+                        <label for="salary" class="validtxt" id="validSalary"></label>
+
+                    </span>
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="form-group">
+
+                <div>
+
+                    <label for="factManagF">نام مدیر :</label>
+
+                    <span class="divValid">
+
+                        <input type="text" name="factManagF" id="factManagF" class="form-control" onkeyup="validFunc(this)" >
+
+                        <label for="factManagF" class="validtxt" id="validFactManagF"></label>
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <label for="factManagL"> نام خانوادگی مدیر :</label>
+
+                    <span class="divValid">
+
+                        <input type="text" name="factManagL" id="factManagL" class="form-control" onkeyup="validFunc(this)" >
+
+                        <label for="factManagL" class="validtxt" id="validFactManagL"></label>
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <label for="factAdd">آدرس کارخانه :</label>
+
+                    <span class="divValid">
+
+                        <textarea name="factAdd" id="factAdd" class="form-control"  onkeyup="validFunc(this)" ></textarea>
+
+                        <label for="factAdd" class="validtxt" id="validFactAdd"></label>
+
+                    </span>
+
+                    <span>   
+
+                        <button type="button"  class="btn btn-success" id="btn-register">ثبت اطلاعات</button>
+    
+                    </span>
+
+                </div>
+
+            </div>
+
+        </form>
+    </fieldset>
+    <div id="dataTitle">
+        <h5></h5>
+    </div>
+
+    <div id="divTbl">
+        <table id="tblInfo">
+
+        </table>
+    </div>
+    <script>
+        let numberPerson = 0;
+        //*******************************************// 
+        let persianBirthDay;
+
+        var rad = document.dataForm.genderA; // for gender radiobuttons 
+
+        //*************************************************/////
+        // if user removes "cheched" of both of radiobuttons
+
+        rad[0].addEventListener('change', function() {
+
+            if ((rad[0].checked && !rad[1].checked) || (!rad[0].checked && rad[1].checked)) {
+
+                document.getElementById('btn-register').disabled = false;
+
+                document.getElementById('gender').innerHTML = "";
+
+            } else {
+
+                document.getElementById('btn-register').disabled = true;
+
+                document.getElementById('gender').innerHTML = "جنسیت را مشخص کنید!";
+
+            }
+        });
+
+        rad[1].addEventListener('change', function() {
+
+            if ((rad[0].checked && !rad[1].checked) || (!rad[0].checked && rad[1].checked)) {
+
+                document.getElementById('btn-register').disabled = false;
+
+                document.getElementById('gender').innerHTML = "";
+
+            } else {
+
+                document.getElementById('gender').innerHTML = "جنسیت را مشخص کنید!";
+
+                document.getElementById('btn-register').disabled = true;
+            }
+        });
+        //************************************************************////
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        $("#birthDate").prop('readonly', true);
+
+        $('#birthDate').persianDatepicker({
+
+            formatDate: "YYYY-0M-0D",
+
+            startDate: "1355/01/01",
+
+            endDate: "1380/12/29",
+
+            onSelect: function() {
+
+                validFunc(birthDate);
+
+                persianBirthDay = $('#birthDate').attr("data-jdate");
+
+            }
+        });
+
+        class Factory {
+
+            constructor(name, address) {
+
+                this.name = name;
+
+                this.address = address;
+
+                // this.managerName = managerName;
+
+            }
+
+            managerName(MngFName, MngLName) {
+
+                this.managerFName = MngFName;
+
+                this.managerLName = MngLName;
+            }
+        };
+
+
+        class Person {
+
+            constructor(firstName, lastName) {
+
+                this.firstName = firstName;
+
+                this.lastName = lastName;
+
+            }
+
+            moreInfo(natCode, gender, address, telephone, birthDay) {
+
+                this.natCode = natCode;
+
+                this.address = address;
+
+                this.telephone = telephone;
+
+                this.birthDay = birthDay;
+
+                this.gender = gender;
+
+            }
+
+        };
+
+        class Employee extends Person {
+
+            constructor(firstName, lastName, jobTitle, salary, workPlace, natCode, gender, address, telephone, birthDay) {
+
+                super(firstName, lastName);
+
+                this.jobTitle = jobTitle;
+
+                this.salary = salary;
+
+                this.workPlace = workPlace;
+
+                this.moreInfo(natCode, gender, address, telephone, birthDay);
+
+            }
+
+        };
+
+        class Manager extends Person {
+
+            constructor(firstName, lastName) {
+
+                super(firstName, lastName);
+
+            }
+
+            get factoryName() {
+
+                return this._factoryName;
+            }
+
+            set factoryName(factname) {
+
+                this._factoryName = factname;
+            }
+        };
+
+        // *************************************************************///
+        /// Validation function for all of field////
+
+        function validFunc(eid) {
+
+            document.getElementById('btn-register').disabled = true; // deactive register button
+
+            let invalidFlag = 0; // determines whether the user has filled all the fields
+
+            let validiD = eid.id; // when every item changes
+
+            let natCodeFlag = firstNFlag = lastNFlag = addEmpFlag = telEmpFlag = birthEmpFlag = jobTitleEmpFlag = workPlaceEmpFlag = salaryEmpFlag = true;
+
+            let managFNameFlag = managLNFlag = factNameFlag = factAddFlag = true;
+
+            let valueID = document.getElementById(validiD).value; // get value of field has changed
+
+            switch (validiD) {
+
+                case "natCode":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validNat').innerHTML = "کد ملی را وارد کنید!";
+
+                        document.getElementById('natCode').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else if (valueID.length != 10) {
+
+                        invalidFlag++;
+
+                        document.getElementById('validNat').innerHTML = "کد را بصورت 10 رقمی وارد کنید!";
+
+                        document.getElementById('natCode').style = "outline: solid 1px palevioletred";
+
+                    } else {
+
+                        document.getElementById('validNat').innerHTML = "";
+
+                        document.getElementById('natCode').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "firstName":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validFirstName').innerHTML = "نام را وارد کنید!";
+
+                        document.getElementById('firstName').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        document.getElementById('validFirstName').innerHTML = "";
+
+                        document.getElementById('firstName').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "lastName":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validLastName').innerHTML = "نام خانوادگی را وارد کنید!";
+
+                        document.getElementById('lastName').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        document.getElementById('validLastName').innerHTML = "";
+
+                        document.getElementById('lastName').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "birthDate":
+
+                    var engDate, yearB, dToday, yearToday, agePerson;
+
+                    if (valueID == "") {
+
+                        document.getElementById('validBirthDate').innerHTML = "تاریخ تولد را وارد کنید!";
+
+                        document.getElementById('birthDate').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        /////// calculate age of person////// 
+
+                        var p = new persianDate();
+
+                        var engDate = $('#birthDate').attr("data-jdate");
+
+                        var yearB = engDate.substr(0, 4);
+
+                        var yearToday = p.now().year;
+
+                        var agePerson = yearToday - yearB;
+
+                        console.log(agePerson);
+
+                        if (agePerson < 20 || agePerson > 45) {
+
+                            document.getElementById('validBirthDate').innerHTML = "سن مجاز بین 20 تا 45 است!";
+
+                            document.getElementById('birthDate').style = "outline: solid 1px palevioletred";
+
+                            invalidFlag++;
+
+                        } else {
+
+                            document.getElementById('validBirthDate').innerHTML = "";
+
+                            document.getElementById('birthDate').style = "outline: none";
+
+                            // Validation of whether the salary is age-appropriate
+
+                            if (document.getElementById('salary').value != "") { // if user enters salary before birthday 
+
+                                var salaryMount = document.getElementById('salary').value;
+
+                                if (agePerson < 30 && salaryMount > 30000000) { // factory rule for salary
+
+                                    document.getElementById('validSalary').innerHTML = "میزان حقوق از حد مجاز بیشتر است!";
+
+                                    document.getElementById('salary').focus();
+
+                                    document.getElementById('salary').style = "outline: solid 1px palevioletred";
+
+                                    invalidFlag++;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    break;
+
+                case "homeTel":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validHomeTel').innerHTML = "تلفن منزل را وارد کنید!";
+
+                        document.getElementById('homeTel').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        let validTel = /^[0]{1}?\d{10}$/;
+
+                        if (!validTel.test(valueID)) {
+
+                            document.getElementById('validHomeTel').innerHTML = "تلفن را با فرمت صحیح وارد کنید!";
+
+                            document.getElementById('homeTel').style = "outline: solid 1px palevioletred";
+
+                            invalidFlag++;
+
+                        } else {
+
+                            document.getElementById('validHomeTel').innerHTML = "";
+
+                            document.getElementById('homeTel').style = "outline: none";
+
+                        }
+
+                    }
+
+                    break;
+
+                case "homeAdd":
+
+                    if (valueID == "" || valueID == null) {
+
+                        document.getElementById('validHomeAdd').innerHTML = "آدرس منزل را وارد کنید!";
+
+                        document.getElementById('homeAdd').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+
+                    } else {
+
+                        document.getElementById('validHomeAdd').innerHTML = "";
+
+                        document.getElementById('homeAdd').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "factName":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validFactName').innerHTML = "نام کارخانه را وارد کنید!";
+
+                        document.getElementById('factName').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        document.getElementById('validFactName').innerHTML = "";
+
+                        document.getElementById('factName').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "factManagF":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validFactManagF').innerHTML = "نام مدیر را وارد کنید!";
+
+                        document.getElementById('factManagF').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        document.getElementById('validFactManagF').innerHTML = "";
+
+                        document.getElementById('factManagF').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "factManagL":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validFactManagL').innerHTML = "نام خانوادگی مدیر را وارد کنید!";
+
+                        document.getElementById('factManagL').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        document.getElementById('validFactManagL').innerHTML = "";
+
+                        document.getElementById('factManagL').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "factAdd":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validFactAdd').innerHTML = "آدرس کارخانه را وارد کنید!";
+
+                        document.getElementById('factAdd').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        document.getElementById('validFactAdd').innerHTML = "";
+
+                        document.getElementById('factAdd').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "jobTitle":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validJobTitle').innerHTML = "سمت شغلی را وارد کنید!";
+
+                        document.getElementById('jobTitle').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        document.getElementById('validJobTitle').innerHTML = "";
+
+                        document.getElementById('jobTitle').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "workPlace":
+
+                    if (valueID == "") {
+
+                        document.getElementById('validWorkPlace').innerHTML = "محل خدمت را وارد کنید!";
+
+                        document.getElementById('workPlace').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+                        document.getElementById('validWorkPlace').innerHTML = "";
+
+                        document.getElementById('workPlace').style = "outline: none";
+
+                    }
+
+                    break;
+
+                case "salary":
+
+
+                    if (valueID == "") {
+
+                        document.getElementById('validSalary').innerHTML = "میزان حقوق را وارد کنید!";
+
+                        document.getElementById('salary').style = "outline: solid 1px palevioletred";
+
+                        invalidFlag++;
+
+                    } else {
+
+
+                        document.getElementById('validSalary').innerHTML = "";
+
+                        document.getElementById('salary').style = "outline: none";
+
+                        if (document.getElementById('birthDate').value != "") { // Validation of whether the salary is age-appropriate
+
+                            //calculate age of person
+
+                            var p = new persianDate();
+
+                            var engDate = $('#birthDate').attr("data-jdate");
+
+                            var yearB = engDate.substr(0, 4);
+
+                            var yearToday = p.now().year;
+
+                            var agePerson = yearToday - yearB;
+
+                            var salaryMount = document.getElementById('salary').value;
+
+                            if (agePerson < 30 && salaryMount > 30000000) { // factory rule for salary
+
+                                document.getElementById('validSalary').innerHTML = "میزان حقوق از حد مجاز بیشتر است!";
+
+                                document.getElementById('salary').style = "outline: solid 1px palevioletred";
+
+                                invalidFlag++;
+
+                            }
+
+                        }
+
+                    }
+
+                    break;
+
+            }
+
+            if (invalidFlag != 0) {
+
+                document.getElementById('btn-register').disabled = true;
+
+            } else if (invalidFlag == 0) { // if user fill all of fields 
+
+                document.getElementById('btn-register').disabled = false;
+
+            }
+
+            return invalidFlag;
+
+        };
+
+
+        // *********************************************************////
+        // submit button check the form/////
+
+        // function register(e){
+
+
+        document.getElementById("btn-register").addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+            let validForm = submitValid(); // check user fill all of fields
+
+            if (validForm != 0) {
+
+                document.getElementById('btn-register').disabled = true;
+
+
+            } else if (validForm == 0) { // if user fill all of fields 
+
+                numberPerson++; // number of person in table
+
+                document.getElementById('btn-register').disabled = false;
+
+                let firstEmp, lastEmp, natcodeEmp, genderEmp, addEmp, telEmp, birthEmp, jobTitleEmp, workPlaceEmp, salaryEmp;
+
+                let managFName, managLName, factName, factAdd;
+
+
+                firstEmp = document.getElementById('firstName').value;
+
+                lastEmp = document.getElementById('lastName').value;
+
+                natcodeEmp = document.getElementById('natCode').value;
+
+                genderEmp = document.getElementById('fGender').checked ? "زن" : "مرد";
+
+                addEmp = document.getElementById('homeAdd').value;
+
+                telEmp = document.getElementById('homeTel').value;
+
+                birthEmp = document.getElementById('birthDate').value;
+
+                jobTitleEmp = document.getElementById('jobTitle').value;
+
+                workPlaceEmp = document.getElementById('workPlace').value;
+
+                salaryEmp = document.getElementById('salary').value;
+
+                managFName = document.getElementById('factManagF').value;
+
+                managLName = document.getElementById('factManagL').value;
+
+                factName = document.getElementById('factName').value;
+
+                factAdd = document.getElementById('factAdd').value;
+
+
+                // build employee class 
+
+                let personEmp = new Employee(firstEmp, lastEmp, jobTitleEmp, salaryEmp, workPlaceEmp, natcodeEmp, genderEmp, addEmp, telEmp, birthEmp);
+
+                // build manager class
+                let personMang = new Manager(managFName, managLName);
+
+
+                personMang.factoryName = factName;
+
+                //build factory class
+
+                let factoryInfo = new Factory(factName, factAdd);
+
+                factoryInfo.managerName(managFName, managLName);
+
+                // /////////////////////////////////
+                if (numberPerson == 1) { //  build column titles  only once
+
+                    document.getElementById('divTbl').classList.add('tableScroll');
+
+                    document.getElementById('dataTitle').innerHTML = "اطلاعات ثبت شده";
+                    document.getElementById('tblInfo').innerHTML = "<tr><th>شماره</th><th>نام </th><th>نام خانوادگی</th><th>کد ملی</th><th>" +
+                        "جنسیت</th><th>تاریخ تولد</th><th>تلفن منزل</th><th>آدرس منزل</th><th>نام کارخانه</th><th>محل خدمت</th><th>سمت شغلی</th>" +
+                        "<th>حقوق دریافتی(ریال)</th><th>نام مدیر </th><th>آدرس کارخانه</th></tr>";
+                };
+
+                var table = document.getElementById("tblInfo");
+
+                // fill table of data
+
+                var row = table.insertRow(numberPerson);
+
+                row.insertCell(0).innerHTML = numberPerson;
+
+                row.insertCell(1).innerHTML = firstEmp;
+
+                row.insertCell(2).innerHTML = lastEmp;
+
+                row.insertCell(3).innerHTML = natcodeEmp;
+
+                row.insertCell(4).innerHTML = genderEmp;
+
+                row.insertCell(5).innerHTML = birthEmp;
+
+                row.insertCell(6).innerHTML = telEmp;
+
+                row.insertCell(7).innerHTML = addEmp;
+
+                row.insertCell(8).innerHTML = factName;
+
+                row.insertCell(9).innerHTML = workPlaceEmp;
+
+                row.insertCell(10).innerHTML = jobTitleEmp;
+
+                row.insertCell(11).innerHTML = salaryEmp;
+
+                row.insertCell(12).innerHTML = managFName + " " + managLName;
+
+                row.insertCell(13).innerHTML = factAdd;
+
+                // reset filds of form
+
+                document.getElementById('firstName').value = "";
+
+                document.getElementById('lastName').value = "";
+
+                document.getElementById('natCode').value = "";
+
+                document.getElementById('homeAdd').value = "";
+
+                document.getElementById('homeTel').value = "";
+
+                document.getElementById('birthDate').value = "";
+
+                document.getElementById('jobTitle').value = "";
+
+                document.getElementById('workPlace').value = "";
+
+                document.getElementById('salary').value = "";
+
+                document.getElementById('factManagF').value = "";
+
+                document.getElementById('factManagL').value = "";
+
+                document.getElementById('factName').value = "";
+
+                document.getElementById('factAdd').value = "";
+
+                document.getElementById('fGender').checked = true;
+
+                document.getElementById('mGender').checked = false;
+
+                document.getElementById('natCode').focus(); // after reset focus on first textbox
+
+            }
+
+        });
+
+        // // check user fill all of fields correctly after user click register button
+        function submitValid() {
+
+            let invalidForm = 0; // flag for validation of form
+
+            invalidForm += validFunc(document.getElementById('natCode'));
+
+            invalidForm += validFunc(document.getElementById('firstName'));
+
+            invalidForm += validFunc(document.getElementById('lastName'));
+
+            invalidForm += validFunc(document.getElementById('birthDate'));
+
+            invalidForm += validFunc(document.getElementById('homeTel'));
+
+            invalidForm += validFunc(document.getElementById('homeAdd'));
+
+            invalidForm += validFunc(document.getElementById('factName'));
+
+            invalidForm += validFunc(document.getElementById('factManagF'));
+
+            invalidForm += validFunc(document.getElementById('factManagL'));
+
+            invalidForm += validFunc(document.getElementById('factAdd'));
+
+            invalidForm += validFunc(document.getElementById('jobTitle'));
+
+            invalidForm += validFunc(document.getElementById('workPlace'));
+
+            invalidForm += validFunc(document.getElementById('salary'));
+
+            // if user removes "checked" of both of radiobuttons
+
+            var genderpersonf = document.getElementById('fGender').checked;
+
+            var genderpersonM = document.getElementById('mGender').checked;
+
+            if (!genderpersonf && !genderpersonM) {
+
+                invalidForm++;
+
+                document.getElementById('gender').innerHTML = "جنسیت را مشخص کنید!";
+
+            } else {
+
+                document.getElementById('gender').innerHTML = "";
+
+            }
+
+
+            return invalidForm;
+
+        };
+    </script>
+
+</body>
+
+</html>

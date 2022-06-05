@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- my Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css.map">
+
+</head>
+
+<body class="bg-light">
+
+
+    <section class="container text-center my-4">
+
+        <h1>Even and Odd Numbers Between 100 & 200</h1>
+
+        <h2>Click the Button to Sort Descending </h2>
+
+        <section class="my-5">
+
+            <div class="row">
+
+                <div class="col-md-5">
+
+                    <table class="table table-striped">
+
+                        <caption class="text-center"> Odd Numbers </caption>
+
+                        <tbody id="myOddTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="col-md-5 offset-md-2">
+
+                    <table class="table table-striped">
+
+                        <caption class="text-center"> Even Numbers </caption>
+
+                        <tbody id="myEvenTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-md-3 offset-md-1">
+
+                    <button class="btn btn-primary" onclick="descendingOddText()"> 
+                        Sort Descending Odd Numbers </button>
+
+                </div>
+
+                <div class="col-md-3 offset-md-4">
+
+                    <button class="btn btn-success" onclick="descendingEvenText()">
+                        Sort Descending Even Numbers </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <script src="assets/js/myJs.js"></script>
+
+</body>
+
+</html>

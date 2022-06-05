@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+
+</head>
+
+<body>
+
+    <section class="container">
+
+        <h1>JavaScript Shapes</h1>
+
+        <h3>Shapes Created by Javascript classes </h3>
+
+        <form class="myForm" action="/action_page.php">
+            <fieldset>
+                <legend>Enter Shape Data</legend><br>
+
+                <label for="shape">Choose a Shape:</label>
+                <select id="shape" name="shape">
+
+                    <option value="Circle">Circle</option>
+                    <option value="Rectangle">Rectangle</option>
+                    <option value="Triangle">Triangle</option>
+
+                </select>
+
+
+
+                <label for="shapeColor">Color:</label>
+                <input type="text" id="shapeColor" name="shapeColor" value="red" placeholder="Color"><br><br>
+
+                <label id="myShapeTypeLabel" for="length">Radius:</label>
+                <input type="number" id="length" name="length" min="35" max="500" value=70 placeholder="Radius">
+
+                <label id="myShapeTypeLabel_2" for="length2">Height:</label>
+                <input type="number" id="length2" name="length" min="35" max="500" value=50 placeholder="Height"><br><br>
+
+
+
+                <button class="myButton1 myYellowGreen" type="button" id="drawShape">Draw</button>
+
+                <button class="myButton1 myRed" type="button" id="eraseShape">Erase</button>
+
+                <button class="myButton1 myBlue" type="button" id="moveShape">Move</button>
+
+                <button class="myButton1 myGreen" type="button" id="stop">Stop</button>
+
+            </fieldset>
+
+
+
+            <p id="shapeInformation"></p>
+
+
+    </section>
+
+    <canvas id="myCanvas" width="600" height="500" class="them_1"></canvas>
+
+
+
+
+
+
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

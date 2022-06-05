@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>shapes</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">   
+
+    <link rel="stylesheet" href="assets/css/style.css"> 
+
+    <script src="assets/js/script.js"></script>
+
+</head>
+
+<body>
+    
+    <section id="firstSec">
+
+        <h2>
+            This exercise is for shapes.
+        </h2>
+
+        <section id="secondSec" class="border border-info">
+
+            <div>
+
+                <label for="exampleFormControlSelect1">Select one of below shape: </label>
+
+                <select class="form-control" id="selectShp" onchange="selectColor()">
+
+                    <option value="rectangle">Rectangle</option>
+
+                    <option value="circle">Circle</option>
+
+                    <option value="square">Square</option>
+
+                    <option value="triangle">Triangle</option>
+
+                </select>
+            </div>
+            
+            <div>
+
+                <label for="blackWhite" >Black & White</label>
+                <input name="color" type="radio" id="blackWhite" checked>
+
+                <label for="colorful" id="lblColor">Green</label>
+                <input name="color"  type="radio" id="colorful">
+
+            </div>
+            
+            <div id="wDiv">
+
+                <label for="widthShape">Width: </label>
+
+                <!-- Valid value for width is between 50 and 650 -->
+
+                <input id="widthShape" type="number" class="form-control"  value="300" onchange="changeWidth()" onkeyup="changeWidth()">
+
+                <label for="">px</label>
+
+                <button type="button" class="btn btn-info" onclick="btnShow()"  id="btnShow">show shape</button>
+
+                <label for="" id="lblErrWidth" ></label>
+
+            </div>
+                
+            
+            <p id="shapeTxt" class="text-info" style="font-weight: bold;">   
+            </p>
+
+            <div id="divImg">
+
+                 <img id="imgShape"  width="100%">
+
+            </div>
+        
+        </section>
+    </section>  
+    
+</body>
+
+</html>

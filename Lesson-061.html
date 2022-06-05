@@ -1,0 +1,237 @@
+<!-- ****************************************-->
+<!-- Window Screen properties javascript BOM -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "Screen width is " + screen.width;
+
+        document.getElementById("demo1").innerHTML =
+            "Screen Height: " + screen.height;
+
+        document.getElementById("demo2").innerHTML =
+            "Available Screen Width: " + screen.availWidth;
+
+        document.getElementById("demo3").innerHTML =
+            "Screen Color Depth: " + screen.colorDepth;
+
+        document.getElementById("demo4").innerHTML =
+            "Screen Pixel Depth: " + screen.pixelDepth;
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- ******************************************-->
+<!-- Window Location properties javascript BOM -->
+<!-- ***************************************** -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript</h2>
+
+    <h3>The window.location object</h3>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "The full URL of this page is:<br>" + window.location.href;
+
+        document.getElementById("demo1").innerHTML =
+            "Page hostname is " + window.location.hostname;
+
+        document.getElementById("demo2").innerHTML =
+            "Page path is " + window.location.pathname;
+
+        document.getElementById("demo3").innerHTML =
+            "Page protocol is " + window.location.protocol;
+
+        document.getElementById("demo4").innerHTML =
+            "Port number is " + window.location.port;
+
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- *************************************************-->
+<!-- Window Location assign properties javascript BOM -->
+<!-- ************************************************ -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript</h2>
+
+    <h3>The window.location object</h3>
+
+    <input type="button" value="Load new document" onclick="newDoc()">
+
+    <script>
+        function newDoc() {
+            window.location.assign("https://www.w3schools.com")
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- *************************************************-->
+<!-- Window History assign properties javascript BOM -->
+<!-- ************************************************ -->
+
+<!-- <html>
+
+<head>
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+
+        function goForward() {
+            window.history.forward()
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="Back" onclick="goBack()">
+
+    <input type="button" value="Forward" onclick="goForward()">
+
+</body>
+
+</html> -->
+
+<!-- *******************************************-->
+<!-- Window Navigator properties javascript BOM -->
+<!-- ****************************************** -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>The Navigator Object</h2>
+
+    <p>The appVersion property returns version information about the browser:</p>
+
+    <p id="demo10"></p>
+    <p id="demo20"></p>
+
+    <script>
+        document.getElementById("demo10").innerHTML =
+            navigator.appVersion;
+
+
+        document.getElementById("demo20").innerHTML =
+            "navigator.onLine is " + navigator.onLine;
+    </script>
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- *********************************************-->
+<!-- Window Confirm Boxes methods  javascript BOM -->
+<!-- ******************************************** -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Confirm Box</h2>
+
+
+    <button onclick="myFunction()">Confirm Box</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+
+            var txt;
+
+            if (confirm("Press a button!")) {
+
+                txt = "You pressed OK!";
+
+            } else {
+
+                txt = "You pressed Cancel!";
+            }
+
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- *********************************************-->
+<!-- Window Prompt Boxes methods  javascript BOM -->
+<!-- ******************************************** -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Prompt</h2>
+
+    <button onclick="myFunction()">Prompt Box</button>
+
+    <p id="demo30"></p>
+
+    <script>
+        function myFunction() {
+            let text;
+
+            let person =
+                prompt("Please enter your name:", "Harry Potter");
+
+            if (person == null || person == "") {
+
+                text = "User cancelled the prompt.";
+
+            } else {
+
+                text = "Hello " + person + "! How are you today?";
+            }
+
+            document.getElementById("demo30").innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html> -->

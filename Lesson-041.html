@@ -1,0 +1,826 @@
+<!-- *************************************** -->
+<!-- how to use data types in JavaScript -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Data Types</h2>
+
+    <p>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:</p>
+
+    <p id="id1"></p>
+
+    <script>
+        let x;         // Now x is undefined
+
+        x = 5;         // Now x is a Number
+
+        x = "John";    // Now x is a String
+
+        document.getElementById("id1").innerHTML = x;
+    </script>
+    ***********************************************************************
+
+    <p id="id2"></p>
+
+    <script>
+        let carName1 = "Volvo XC60"; // تعریف متغیر رشته ای 
+
+        let carName2 = 'Volvo XC60'; // تعریف متغیر رشته ای 
+
+        document.getElementById("id2").innerHTML =
+            carName1 + "<br>" +
+            carName2;
+    </script>
+
+    ***********************************************************************
+    <p id="id3"></p>
+
+    <script>
+        //به کار بردن یک رشته داخل یک رشته ی دیگر
+        let answer1 = "It's alright";
+
+        let answer2 = "He is called 'Johnny'";
+
+        let answer3 = 'He is called "Johnny"';
+
+        document.getElementById("id3").innerHTML =
+            answer1 + "<br>" +
+            answer2 + "<br>" +
+            answer3;
+    </script>
+
+    **********************************************************************
+    <p id="id31"></p>
+
+    <script>
+        let text32 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        document.getElementById("id31").innerHTML = text32.length; //نمایش طول رشته 
+    </script>
+    **********************************************************************
+
+    <p id="id32"></p>
+
+    <script>
+        //دستور زیر خطا می دهد
+        //let text = "We are the so-called "Vikings" from the north.";
+
+        let text = "We are the so-called \"Vikings\" from the north.";
+
+        document.getElementById("id32").innerHTML = text;
+    </script>
+
+    **************************************************************************
+
+    <p id="id33"></p>
+
+    <script>
+        let text33 = 'It\'s alright.'; // برای نوشتن علامت سینگل کوتیشن در متن
+
+        document.getElementById("id33").innerHTML = text33;
+    </script>
+
+    **************************************************************************
+
+    <p id="id34"></p>
+
+    <script>
+        let text34 =  //   \ برای ایجاد یک کاراکتر 
+            "The character \\ is called backslash.";
+
+        document.getElementById("id34").innerHTML = text34;
+    </script>
+
+    *******************************************************************************
+
+    <p id="id35"></p>
+
+    <script>
+        //دستور زیر خطا می دهد
+        // document.getElementById("id35").innerHTML = "Hello 
+        //     World!";
+
+        // این دستور هم کار می کند ولی ممکن است در بعضی از مرورگرها کار نکند
+        // document.getElementById("id35").innerHTML = "Hello \
+        //     World!";
+
+        //دستور زیر کار نمی کند 
+        // document.getElementById("id35").innerHTML = \
+        //     "Hello World!.";
+
+        // این روش از همه بهتر است
+        document.getElementById("id35").innerHTML = "Hello " +
+            "World!";
+    </script>
+
+    *******************************************************************************
+
+    <p id="id36"></p>
+
+    <script>
+        //تعریف رشته بصورت معمولی و یک شیء
+        let x36 = "Student";        // x is a string
+
+        let y36 = new String("stdent");  // y is an object
+
+        document.getElementById("id36").innerHTML =
+            typeof x36 + "<br>" + typeof y36;
+    </script>
+
+    ***********************************************************************************
+
+    <p id="id37"></p>
+
+    <script>
+        let x37 = "John";        // x is a string
+
+        let y37 = new String("John");  // y is an object
+
+        //مقایسه محتوای دو رشته 
+        document.getElementById("id37").innerHTML = (x37 == y37);
+    </script>
+
+    *******************************************************************************
+
+    <p id="id38"></p>
+
+    <script>
+        let x38 = "Ali";        // x is a string
+
+        let y38 = new String("Ali");  // y is an object
+
+        //مقایسه ی محتوا و نوع متغیر ها 
+        document.getElementById("id38").innerHTML = (x38 === y38);
+    </script>
+
+    ************************************************************************************
+
+    <p id="id39"></p>
+
+    <script>
+        let x39 = new String("Reza");  // x is an object
+
+        let y39 = new String("Reza");  // y is an object
+
+        //مقایسه ی دو شیء به این روش غلط است 
+        document.getElementById("id39").innerHTML = (x39 == y39);
+
+        //دستور زیر هم کار نمی کند
+        //document.getElementById("id39").innerHTML = (x39 === y39);
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id40"></p>
+
+    <script>
+        let str = "Apple, Banana, Kiwi";
+
+        // slice  استفاده از متد 
+        document.getElementById("id40").innerHTML = str.slice(7, 13);
+    </script>
+
+    ***********************************************************************************
+
+    <p id="id41"></p>
+
+    <script>
+        let str41 = "Apple, Banana, Kiwi";
+
+        //استفاده از متد با پارامترهای منفی
+        document.getElementById("id41").innerHTML =
+            str41.slice(-12, -6);
+    </script>
+
+    ***********************************************************************************
+
+    <p id="id42"></p>
+
+    <script>
+        let str42 = "Apple, Banana, Kiwi";
+
+        //استفاده از متد با یک پارامتر
+        document.getElementById("id42").innerHTML = str42.slice(7);
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id43"></p>
+
+    <script>
+        let str43 = "Apple, Banana, Kiwi";
+
+        //  substring استفاده از متد 
+        document.getElementById("id43").innerHTML = str43.substring(7, 13);
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id44"></p>
+
+    <script>
+        let str44 = "Apple, Banana, Kiwi";
+
+        document.getElementById("id44").innerHTML = str44.substr(7, 6);
+    </script>
+
+    ***********************************************************************************
+
+    <p id="id45">Please visit Microsoft!</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            let text45 = document.getElementById("id45").innerHTML;
+
+            //جایگزینی متنی با متن دیگر 
+            document.getElementById("id45").innerHTML =
+                text45.replace("Microsoft", "W3Schools");
+        }
+    </script>
+
+    ***************************************************************************************
+
+    <button onclick="myFunction()">Try it replace</button>
+
+    <p id="id46">Please visit Microsoft and Microsoft!</p>
+
+    <script>
+        function myFunction() {
+
+            let text = document.getElementById("id46").innerHTML;
+
+            //تغییر اولین رشته ی متناسب با پارامتر اول 
+            document.getElementById("id46").innerHTML =
+                text.replace("Microsoft", "W3Schools");
+        }
+    </script>
+
+    ***********************************************************************************
+
+    <button onclick="myFunction()">Try it /i</button>
+
+    <p id="id47">Please visit MicrosofT!</p>
+
+    <script>
+        function myFunction() {
+            let text47 = document.getElementById("id47").innerHTML;
+
+            //این دستور کار نمی کند چون از حروف بزرگ استفاده شده است
+            // document.getElementById("id47").innerHTML =
+            //     text47.replace("MICROSOFT", "W3Schools");
+
+            //این دستور در هر شرایطی عمل می کند صرف نظر از اینکه با حروف بزرگ یا کوچک و یا هر دو باشد
+            document.getElementById("id47").innerHTML =
+                text47.replace(/MICROSOFT/i, "W3Schools");
+        }
+    </script>
+
+    **************************************************************************************
+
+    <button onclick="myFunction()">Try it /g</button>
+
+    <p id="id48">Please visit Microsoft and Microsoft!</p>
+
+    <script>
+        function myFunction() {
+            let text = document.getElementById("id48").innerHTML;
+
+            document.getElementById("id48").innerHTML =
+                text.replace(/Microsoft/g, "W3Schools");
+        }
+    </script>
+
+    ***************************************************************************************
+
+    <button onclick="myFunction()">Try it Upper case</button>
+
+    <p id="id49">Hello World!</p>
+
+    <script>
+        function myFunction() {
+            let text = document.getElementById("id49").innerHTML;
+
+            //تبدیل کلیه حروف رشته به حروف بزرگ
+            document.getElementById("id49").innerHTML =
+                text.toUpperCase();
+        }
+    </script>
+
+    **********************************************************************************
+    <button onclick="myFunction()">Try it Lower case</button>
+
+    <p id="id50">Hello World!</p>
+
+    <script>
+        function myFunction() {
+            let text = document.getElementById("id50").innerHTML;
+
+            //تبدیل کلیه حروف به حروف کوچک
+            document.getElementById("id50").innerHTML =
+                text.toLowerCase();
+        }
+    </script>
+
+    *************************************************************************************
+
+    <button onclick="myFunction()">Try it trim</button>
+
+    <script>
+        function myFunction() {
+            let text = "     Hello World!     ";
+
+            //حذف کردن فضای خالی اطراف یک رشته
+            alert(text.trim());
+        }
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id51"></p>
+
+    <script>
+        let text51 = "5";
+
+        //اضافه کردن 4 عدد 0 به ابتدای رشته
+        document.getElementById("id51").innerHTML =
+            text51.padStart(4, 0);
+
+        //اضافه کردن 4 عدد 0 به انتهای رشته
+        // document.getElementById("id51").innerHTML = 
+        //     text51.padEnd(4, 0);
+
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id52"></p>
+
+    <script>
+        var text52 = "HELLO WORLD";
+
+        //اولین کاراکتر در رشته را بر می گرداند
+        document.getElementById("id52").innerHTML = text52.charAt(0);
+    </script>
+
+    ***********************************************************************************
+
+    <p id="id53"></p>
+
+    <script>
+        let text53 = "HELLO WORLD";
+
+        //کد اسکی اولین کاراکتر در رشته را برمی گرداند
+        document.getElementById("id53").innerHTML = text53.charCodeAt(0);
+    </script>
+
+    ***********************************************************************************
+
+    <p id="id54"></p>
+
+    <script>
+        var str54 = "HELLO WORLD";
+
+        //بدست آوردن اولین کاراکتر رشته
+        document.getElementById("id54").innerHTML = str54[0];
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id55"></p>
+
+    <script>
+        let text55 = "HELLO WORLD";
+
+        //این دستور  خطا نمی دهد ولی کار هم نمی کند
+        text55[0] = "A";  // Does not work
+
+        document.getElementById("id55").innerHTML = text55;
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id56"></p>
+
+    <script>
+        let text56 = "a,b,c,d,e,f";
+
+        //رشته ی بالا تبدیل به یک آرایه می شود
+        const myArray = text56.split(",");
+
+        document.getElementById("id56").innerHTML = myArray[1];
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id57"></p>
+
+    <p>این روش در مرورگر اینترنت اکسپلورر کار نمی کند</p>
+
+    <script>
+        let text57 = `Hello world!`;
+
+        document.getElementById("id57").innerHTML = text57;
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id58"></p>
+
+    <p>این روش در مرورگر اینترنت اکسپلورر کار نمی کند</p>
+
+    <script>
+        let text58 =
+
+            `The quick
+            brown fox
+            jumps over
+            the lazy dog`;
+
+        document.getElementById("id58").innerHTML = text58;
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id59"></p>
+
+    <p>این روش در مرورگر اینترنت اکسپلورر کار نمی کند</p>
+
+
+    <script>
+        let firstName59 = "John";
+        let lastName59 = "Doe";
+
+        //ایجاد یک رشته که داخل آن محتوای متغیر را قرار می دهیم
+        let text59 = `Welcome ${firstName59}, ${lastName59}!`;
+
+        document.getElementById("id59").innerHTML = text59;
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id60"></p>
+
+    <p>این روش در مرورگر اینترنت اکسپلورر کار نمی کند</p>
+
+    <script>
+        let price = 10;
+
+        let VAT = 0.25;
+
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+        document.getElementById("id60").innerHTML = total;
+    </script>
+
+    ***************************************************************************************
+
+    <p id="id61"></p>
+
+    <p>این روش در مرورگر اینترنت اکسپلورر کار نمی کند</p>
+
+    <script>
+        let header = "Templates Literals";
+
+        //ایجاد تگ 
+        //HTML
+        //با مقدار پارامتریک
+        let html = `<h2>${header}</h2>`;
+
+        document.getElementById("id61").innerHTML = html;
+    </script>
+
+    ***********************************************************************************
+    <p id="id4"></p>
+
+    <script>
+        //تعریف متغیر های عددی
+        let x1 = 45.00;
+
+        let x2 = 45;
+
+        let x3 = 3.14;
+
+        document.getElementById("id4").innerHTML =
+            x1 + "<br>" + x2 + "<br>" + x3;
+    </script>
+    ************************************************************************
+    <p id="id5"></p>
+
+    <script>
+        //تعریف اعداد خیلی بزرگ و خیلی کوچک
+        let y = 238e5;
+
+        let z = 103e-5;
+
+        document.getElementById("id5").innerHTML =
+            y + "<br>" + z;
+    </script>
+    ****************************************************************************
+    <p id="id6"></p>
+
+    <script>
+        let x6 = 50;
+
+        let y6 = 50;
+
+        let z6 = 75;
+
+        document.getElementById("id6").innerHTML =   // نتیجه ی درست یا غلط را نشان می دهد
+            (x6 == y6) + "<br>" + (x6 == z6);
+    </script>
+
+    ****************************************************************************
+
+    <p id="id62"></p>
+
+    <script>
+        let x62 = "100";
+
+        let y62 = "10";
+
+        let z62 = x62 / y62;
+
+        document.getElementById("id62").innerHTML = z62; //محاسبه ی جبری بین دو متغیر رشته ای عدد
+    </script>
+
+    *****************************************************************************
+
+    <p id="id63"></p>
+
+    <script>
+
+        let x63 = "100";
+
+        let y63 = "10";
+
+        let z63 = x63 + y63; //جمع جبری دو متغیر عددی 
+
+        document.getElementById("id63").innerHTML = z63;
+    </script>
+
+    ******************************************************************************
+
+    <p id="id64"></p>
+
+    <script>
+        //نتیجه ی محاسبه 
+        //است NaN
+        document.getElementById("id64").innerHTML = 100 / "Apple";
+
+    </script>
+
+    ********************************************************************************
+
+    <p id="id65"></p>
+
+    <script>
+
+        let x65 = 100 / "Apple";
+
+        //isNaN متد
+        document.getElementById("id65").innerHTML = isNaN(x65);
+
+    </script>
+
+    ******************************************************************************
+
+    <p id="id66"></p>
+
+    <script>
+
+        let x66 = NaN;
+
+        //نوع نان  از جنس عددی می باشد
+        document.getElementById("id66").innerHTML = typeof x66;
+
+    </script>
+
+    ******************************************************************************
+
+    <p id="id67"></p>
+
+    <script>
+
+        let myNumber67 = 2;
+
+        let txt67 = "";
+
+        //تا نتیجه ی محاسبه از حد مجاز فراتر رود حلقه ادامه دارد
+        while (myNumber67 != Infinity) {
+
+            myNumber67 = myNumber67 * myNumber67;
+
+            txt67 = txt67 + myNumber67 + "<br>";
+        }
+
+        document.getElementById("id67").innerHTML = txt67;
+
+    </script>
+
+    ****************************************************************************
+
+    <p id="id68"></p>
+
+    <script>
+
+        let x68 = 2 / 0;
+
+        let y68 = -2 / 0;
+
+        //نتیجه ی تقسیم بر صفر
+        document.getElementById("id68").innerHTML = x68 + "<br>" + y68;
+
+    </script>
+
+    ****************************************************************************
+
+    <p id="id69"></p>
+
+    <script>
+
+        document.getElementById("id69").innerHTML = typeof Infinity;
+
+    </script>
+
+    ******************************************************************************
+
+    <p id="id70"></p>
+
+    <script>
+
+        let myNumber70 = 32;
+
+        //محاسبه عدد 32 در مبناهای مختلف
+        document.getElementById("id70").innerHTML =
+            "32 = " + "<br>" +
+            " Decimal " + myNumber70.toString(10) + "<br>" +
+            " Hexadecimal " + myNumber70.toString(16) + "<br>" +
+            " Octal " + myNumber70.toString(8) + "<br>" +
+            " Binary " + myNumber70.toString(2);
+
+    </script>
+
+    ****************************************************************************
+
+    <p id="id71"></p>
+
+    <script>
+
+        let x71 = 123;
+
+        document.getElementById("id71").innerHTML =
+            x71.toString() + "<br>" +
+            (123).toString() + "<br>" +
+            (100 + 23).toString();
+
+    </script>
+
+    *****************************************************************************
+
+    <p id="id72"></p>
+
+    <script>
+
+        let x72 = 9.656;
+
+        document.getElementById("id72").innerHTML =
+            x72.toFixed(0) + "<br>" +
+            x72.toFixed(2) + "<br>" +
+            x72.toFixed(4) + "<br>" +
+            x72.toFixed(6);
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id73"></p>
+
+    <script>
+
+        document.getElementById("id73").innerHTML =
+            Number(true) + "<br>" +
+            Number(false) + "<br>" +
+            Number("10") + "<br>" +
+            Number("  10") + "<br>" +
+            Number("10  ") + "<br>" +
+            Number(" 10  ") + "<br>" +
+            Number("10.33") + "<br>" +
+            Number("10,33") + "<br>" +
+            Number("10 33") + "<br>" +
+            Number("Ali");
+
+    </script>
+
+    *****************************************************************************
+
+    <p id="id74"></p>
+
+    <script>
+
+        document.getElementById("id74").innerHTML =
+            parseInt("-10") + "<br>" +
+            parseInt("-10.33") + "<br>" +
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 6") + "<br>" +
+            parseInt("10 years") + "<br>" +
+            parseInt("years 10");
+
+    </script>
+
+    *************************************************************************
+
+    <p id="id75"></p>
+
+    <script>
+
+        document.getElementById("id75").innerHTML =
+            parseFloat("10") + "<br>" +
+            parseFloat("10.33") + "<br>" +
+            parseFloat("10 6") + "<br>" +
+            parseFloat("10 years") + "<br>" +
+            parseFloat("years 10");
+
+    </script>
+
+    *****************************************************************************
+
+    <p id="id76"></p>
+
+    <script>
+
+        let x76 = Number.MAX_VALUE;
+
+        document.getElementById("id76").innerHTML = x76;
+
+    </script>
+
+    ****************************************************************************
+
+    <p id="id77"></p>
+
+    <script>
+
+        let x77 = 6;
+
+        document.getElementById("id77").innerHTML = x77.MAX_VALUE;
+        
+    </script>
+
+    **************************************************************************
+    <p id="id7"></p>
+
+    <script>
+        const cars = ["Benz", "Volvo", "BMW"]; // تعریف آرایه 
+
+        document.getElementById("id7").innerHTML = cars[0];
+    </script>
+    ****************************************************************************
+
+    <p id="id8"></p>
+
+    <script>
+        const person = {
+            firstName: "John",
+
+            lastName: "Doe",
+
+            age: 50,
+
+            eyeColor: "blue"
+        };
+
+        document.getElementById("id8").innerHTML =
+            person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    ************************************************************************
+    <p id="id9"></p>
+
+    <script>
+        document.getElementById("id9").innerHTML =
+            typeof "" + "<br>" +
+            typeof "John" + "<br>" +
+            typeof ("John Doe") + "<br>" +
+            typeof 3.14;
+    </script>
+    ***********************************************************************
+    <p id="id10"></p>
+
+    <script>
+        let car;
+
+        document.getElementById("id10").innerHTML =
+            car + "<br>" + typeof car;
+    </script>
+    **********************************************************************
+
+</body>
+
+</html>

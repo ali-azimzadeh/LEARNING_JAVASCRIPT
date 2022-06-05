@@ -1,0 +1,44 @@
+#firstSec{
+    margin: 20px;
+    padding: 20px;
+}
+#secondSec{
+    padding: 20px;
+    width: 700px;
+    padding-bottom: 0;
+}
+.form-control{
+
+    display: inline;
+}
+select.form-control{
+    width: 150px;       
+    margin-bottom: 20px;
+}
+.btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 58px;
+}
+div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2{
+    margin-bottom: 40px;
+}
+#blackWhite{
+    margin-right: 10px;
+}
+#widthShape{
+    width: 100px;
+}
+#lblErrWidth{
+    margin-top: 0;
+    color: red;
+    font-size: 11px;
+    position: relative;
+    top: 30px;
+    left: -338px;
+}
+

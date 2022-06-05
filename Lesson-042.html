@@ -1,0 +1,81 @@
+<!-- *************************************** -->
+<!-- how to use functions in JavaScript -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Functions</h2>
+
+    <p>This example calls a function which performs a calculation, and returns the result:</p>
+
+    <p id="id1"></p>
+
+    <script>
+        function myFunction(p1, p2) { //تعریف یک تابع 
+            return p1 * p2;
+        }
+        document.getElementById("id1").innerHTML = myFunction(4, 3); // صدا زدن یک تابع
+    </script>
+
+    *****************************************************************************
+
+    <p id="id2"></p>
+
+    <script>
+        function toCelsius(farenheit) { // تابع تبدیل درجه ی فارنهایت به سلسیوس
+            return (5 / 9) * (f - 32);
+        }
+
+        document.getElementById("id2").innerHTML = toCelsius(77);
+    </script>
+
+    ****************************************************************************
+
+    <p id="id3"></p>
+
+    <script>
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+        document.getElementById("id3").innerHTML = toCelsius; //صدا زدن تابع بدون پرانتز
+    </script>
+
+    ********************************************************************************
+
+    <p id="id4"></p>
+
+    <script>
+        document.getElementById("id4").innerHTML =
+            "The temperature is " + toCelsius(77) + " Celsius"; //صدا زدن تابع داخل یک عبارت
+
+        function toCelsius(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        }
+    </script>
+
+    *********************************************************************************
+
+    <p id="id5"></p>
+
+    <p id="id6"></p>
+
+    <script>
+        myFunction();
+
+        function myFunction() {
+            let carName = "Volvo"; //متغیر بصورت محلی تعریف می شود و خارج از تابع کار نمی کند
+            document.getElementById("id5").innerHTML =
+                typeof carName + " " + carName;
+        }
+
+        document.getElementById("id6").innerHTML =
+            typeof carName;
+    </script>
+
+    **********************************************************************************
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!-- *************************************** -->
+<!-- how to use events in JavaScript -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button onclick="document.getElementById('id1')
+         .innerHTML=Date()">The time is?
+    </button>
+
+    <p id = "id1"></p>
+
+    ************************************************
+
+    <br />
+
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+
+    <br>
+
+    *************************************************
+
+    <br>
+
+    <button onclick="displayDate()">The time is?</button>
+
+    <script>
+        function displayDate() {
+            document.getElementById("id2").innerHTML = Date();
+        }
+    </script>
+
+    <p id = "id2"></p>
+
+********************************************************
+
+
+</body>
+
+</html>

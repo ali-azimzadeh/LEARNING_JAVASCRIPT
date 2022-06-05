@@ -1,0 +1,180 @@
+<!-- *************************************** -->
+<!-- how to use operators in JavaScript -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Operators</h2>
+
+    <p id="id1"></p>
+
+    <script>
+        let text1 = "John";
+
+        let text2 = "Doe";
+
+        let text3 = text1 + " " + text2; //جمع دو رشته 
+
+        document.getElementById("id1").innerHTML = text3;
+    </script>
+
+
+    *****************************************************************
+
+    <p id="id2"></p>
+
+    <script>
+        let text4 = "What a very ";
+
+        text4 += "nice day"; // جمع دو رشته 
+
+        document.getElementById("id2").innerHTML = text4;
+    </script>
+
+
+    ****************************************************************
+
+    <p id="id3"></p>
+
+    <script>
+        let x = 5 + 5; // جمع دو عدد
+
+        //دقت کنید که جمع یک رشته با یک عدد ، نتیجه آن از جنس رشته ای خواهد بود
+        let y = "5" + 5; //جمع عدد و رشته 
+
+        let z = "Hello" + 5; //جمع عدد و رشته 
+
+        document.getElementById("id3").innerHTML =
+            x + "<br>" + y + "<br>" + z;
+    </script>
+
+    ****************************************************************
+    <p>( / )</p>
+
+    <p id="id4"></p>
+
+    <script>
+        let x1 = 5;
+
+        let y1 = 2;
+
+        let z1 = x1 / y1;  //خارج قسمت تقسیم  دو عدد
+
+        document.getElementById("id4").innerHTML = z1;
+    </script>
+    ****************************************************************
+    <p>( % )</p>
+
+    <p id="id5"></p>
+
+    <script>
+        let x2 = 5;
+
+        let y2 = 2;
+
+        let z2 = x2 % y2; //باقیمانده تقسیم را محاسبه می کند
+
+        document.getElementById("id5").innerHTML = z2;
+    </script>
+
+    *****************************************************************
+
+    <p>(++)</p>
+
+    <p id="id6"></p>
+
+    <script>
+        let x3 = 5;
+
+        x3++; //یک واحد اضافه می کند
+
+        let z3 = x3;
+
+        document.getElementById("id6").innerHTML = z3;
+    </script>
+
+
+    ******************************************************************
+    <p>(--)</p>
+
+    <p id="id7"></p>
+
+    <script>
+        let x4 = 5;
+
+        x4--; //یک واحد کسر می کند
+
+        let z4 = x4;
+
+        document.getElementById("id7").innerHTML = z4;
+    </script>
+
+    ******************************************************************
+
+    <p>(**)</p>
+
+    <p id="id8"></p>
+
+    <script>
+        let x5 = 5;
+
+        document.getElementById("id8").innerHTML = x5 ** 2; //توان را محاسبه می کند
+    </script>
+
+    *********************************************************************
+    <p>( Math.pow() )</p>
+
+    <p id="id9"></p>
+
+    <script>
+        let x6 = 5;
+        // تابع زیر نیز توان را محاسبه می کند
+        document.getElementById("id9").innerHTML = Math.pow(x6, 2);
+    </script>
+
+    ***********************************************************************
+    <p>( الویت اپراتورها )</p>
+
+    <p id="id10"></p>
+
+    <script>
+        //الویت اپراتورها
+        document.getElementById("id10").innerHTML = 100 + 50 * 3;
+    </script>
+
+
+    <p id="id11"></p>
+
+    <script>
+        document.getElementById("id11").innerHTML = (100 + 50) * 3;
+    </script>
+
+
+    <p id="id12"></p>
+
+    <script>
+        document.getElementById("id12").innerHTML = 100 + 50 - 3;
+    </script>
+
+    ***************************************************************************
+    <p>( += )</p>
+
+    <p id="id13"></p>
+
+    <script>
+        let x13 = 10;
+
+        x13 += 5; //عملیات جمع و تخصیص 
+
+        document.getElementById("id13").innerHTML = x13;
+    </script>
+
+    *************************************************************************
+
+
+</body>
+
+</html>

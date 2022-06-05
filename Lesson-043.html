@@ -1,0 +1,110 @@
+<!-- *************************************** -->
+<!-- how to use objects in JavaScript -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Objects</h2>
+
+    <p id="id1"></p>
+
+    <script>
+        // Create an object: تعریف یک شیء
+        const car = { type: "Fiat", model: "500", color: "white" };
+
+        // Display some data from the object:
+        document.getElementById("id1").innerHTML = "The car type is " + car.type;
+    </script>
+
+    ****************************************************************************
+
+    <p id="id2"></p>
+
+    <script>
+        // Create an object:
+        const person = { firstName: "reza", lastName: "shirazi", age: 65, eyeColor: "blue" };
+
+        // Display some data from the object:
+        document.getElementById("id2").innerHTML =
+            person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    *************************************************************************
+
+    <p id="id3"></p>
+
+    <script>
+        // Create an object:  روش دیگری برای تعریف شیء
+        const person2 = {
+            firstName: "maryam",
+            lastName: "azizi",
+            age: 25,
+            eyeColor: "blue"
+        };
+
+        // Display some data from the object:
+        document.getElementById("id3").innerHTML =
+            person2.firstName + " is " + person2.age + " years old.";
+    </script>
+
+    ******************************************************************************
+
+    <p id="id4"></p>
+
+    <script>
+        // Create an object:
+        const person3 = {
+            firstName: "amir",
+            lastName: "tajik",
+            id: 5566
+        };
+
+        // Display some data from the object:
+        document.getElementById("id4").innerHTML =
+            person3.firstName + " " + person3.lastName; //روش دسترسی به مقادیر شیء
+    </script>
+
+    *******************************************************************************
+
+    <p id="id5"></p>
+
+    <script>
+        // Create an object:
+        const person5 = {
+            firstName: "Ali",
+            lastName: "Azimzadeh",
+            id: 5566
+        };
+
+        // Display some data from the object:
+        document.getElementById("id5").innerHTML =
+            person5["firstName"] + " " + person5["lastName"]; //دسترسی به مقادیر شیء با استفاده از روش آرایه
+    </script>
+
+    ***********************************************************************************
+
+    <p id="id6"></p>
+
+    <script>
+        // Create an object:
+        const person6 = {
+            firstName: "amir",
+            lastName: "ghasemi",
+            id: 56,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // Display data from the object:
+        document.getElementById("id6").innerHTML = person6.fullName(); //نحوه ی فراخوانی متد شیء
+    </script>
+
+**********************************************************************************
+
+</body>
+
+</html>

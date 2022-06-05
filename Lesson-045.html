@@ -1,0 +1,592 @@
+<!-- *************************************** -->
+<!-- how to use arrays in JavaScript -->
+<!-- *************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Arrays</h2>
+
+    <p id="id1"></p>
+
+    <script>
+
+        //تعریف یک آرایه رشته ای
+        const cars1 = ["Benz", "Volvo", "BMW"];
+
+        document.getElementById("id1").innerHTML = cars1;
+
+    </script>
+
+    **********************************************************************
+
+    <p id="id2"></p>
+
+    <script>
+
+        //تعریف آرایه و مقدار دهی در جاهای مختلف برنامه
+        const cars2 = [];
+
+        cars2[0] = "Benz";
+
+        cars2[1] = "Volvo";
+
+        cars2[2] = "BMW";
+
+        document.getElementById("id2").innerHTML = cars2;
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id3"></p>
+
+    <script>
+
+        //تعریف آرایه بصورت یک شیء
+        const cars3 = new Array("Benz", "Volvo", "BMW");
+
+        document.getElementById("id3").innerHTML = cars3;
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id4"></p>
+
+    <script>
+
+        const cars4 = ["Benz", "Volvo", "BMW"];
+
+        document.getElementById("id4").innerHTML = cars4[0];
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id5"></p>
+
+    <script>
+
+        const cars5 = ["Saab", "Volvo", "BMW"];
+        //تغییر یک عنصر از آرایه
+        cars5[0] = "Opel";
+
+        document.getElementById("id5").innerHTML = cars5
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id6"></p>
+
+    <script>
+
+        const cars6 = ["Saab", "Volvo", "BMW"];
+
+        //دسترسی به کل عناصر یک آرایه
+        document.getElementById("id6").innerHTML = cars6;
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id7"></p>
+
+    <script>
+
+        const person7 =
+            { firstName: "Sara", lastName: "Ahmadi", age: 46 };
+
+        //نحوه ی دسترسی به اعضای یک شیء
+        document.getElementById("id7").innerHTML = person7.firstName;
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id8"></p>
+
+    <script>
+
+        const fruits =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        //تعداد عناصر آرایه را نشان می دهد
+        document.getElementById("id8").innerHTML = fruits.length;
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id9"></p>
+
+    <script>
+
+        const fruits9 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        //آخرین عنصر آرایه را نشان می دهد
+        document.getElementById("id9").innerHTML = fruits9[fruits9.length - 1];
+
+        //این دسّتور غلط است و کار نمی کند
+        //document.getElementById("id9").innerHTML = fruits9[fruits9.length];
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id10"></p>
+
+    <script>
+        const fruits10 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        let text10 = "<ul>";
+
+        //پیمایش در عناصر یک آرایه
+        fruits10.forEach(myFunction10);
+
+        text10 += "</ul>";
+
+        document.getElementById("id10").innerHTML = text10;
+
+        function myFunction10(value) {
+
+            text10 += "<li>" + value + "</li>";
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <button onclick="myFunction11()">add1</button>
+
+    <p id="id11"></p>
+
+    <script>
+
+        const fruits11 =
+            ["Banana", "Orange", "Apple"];
+
+        document.getElementById("id11").innerHTML = fruits11;
+
+        function myFunction11() {
+
+            //اضافه کردن یک عنصر جدید به آرایه
+            fruits11.push("Lemon");
+
+            document.getElementById("id11").innerHTML = fruits11;
+        }
+
+    </script>
+    ***************************************************************************
+
+    <button onclick="myFunction12()">add2</button>
+
+    <p id="id12"></p>
+
+    <script>
+        const fruits12 =
+            ["Banana", "Orange", "Apple"];
+
+        document.getElementById("id12").innerHTML = fruits12;
+
+        function myFunction12() {
+
+            //اضافه کردن یک عنصر جدید 
+            fruits12[fruits12.length] = "Lemon";
+
+            document.getElementById("id12").innerHTML = fruits12;
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id13"></p>
+
+    <script>
+
+        const fruits13 = ["Banana", "Orange", "Apple"];
+
+        //تشخیص آرایه بودن یک متغیر
+        document.getElementById("id13").innerHTML = Array.isArray(fruits13);
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id14"></p>
+
+    <script>
+
+        const fruits14 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        //تبدیل یه آرایه به رشته
+        document.getElementById("id14").innerHTML = fruits14.toString();
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id15"></p>
+
+    <script>
+
+        const fruits15 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        //تبدیل یک آرایه به رشته با کاراکتر خاص بین آنها
+        document.getElementById("id15").innerHTML = fruits15.join(" * ");
+
+    </script>
+    ***************************************************************************
+
+    <p id="id16"></p>
+
+    <p id="id17"></p>
+
+    <script>
+
+        const fruits16 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("id16").innerHTML = fruits16;
+
+        //حذف کردن یک عنصر 
+        fruits16.pop();
+
+        document.getElementById("id17").innerHTML = fruits16;
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id18"></p>
+    <p id="id19"></p>
+    <p id="id20"></p>
+
+    <script>
+
+        const fruits17 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        //عناصر آرایه قبل از حذف 
+        document.getElementById("id18").innerHTML = fruits17;
+
+        //عنصر حذف شده از آرایه
+        document.getElementById("id19").innerHTML = fruits17.pop();
+
+        //عناصر آرایه بعد از حذف
+        document.getElementById("id20").innerHTML = fruits17;
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id21"></p>
+
+    <p id="id22"></p>
+
+    <script>
+
+        const fruits18 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("id21").innerHTML = fruits18;
+
+        //اولین عنصر آرایه را حذف میکند
+        fruits18.shift();
+
+        document.getElementById("id22").innerHTML = fruits18;
+
+    </script>
+
+    ***************************************************************************
+
+    <button onclick="myFunction23()">unshift</button>
+
+    <p id="id23"></p>
+
+    <script>
+        const fruits23 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("id23").innerHTML = fruits23;
+
+        function myFunction23() {
+
+            //به اولین عنصر آرایه یک عنصر جدید اضافه می کند
+            fruits23.unshift("Lemon");
+
+            document.getElementById("id23").innerHTML = fruits23;
+        }
+
+    </script>
+
+    ***************************************************************************
+    <button onclick="myFunction24()">splice1</button>
+
+    <p id="id24"></p>
+
+    <p id="id25"></p>
+
+    <script>
+
+        const fruits24 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("id24").innerHTML =
+            "Original Array:<br>" + fruits24;
+
+        function myFunction24() {
+
+            //ایجاد دو عنصر جدید بعد از عنصر دوم آرایه
+            fruits24.splice(2, 0, "Lemon", "Kiwi");
+
+            document.getElementById("id25").innerHTML =
+                "New Array:<br>" + fruits24;
+
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <button onclick="myFunction26()">splice2</button>
+
+    <p id="id26"></p>
+
+    <script>
+
+        const fruits25 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("id26").innerHTML = fruits25;
+
+        function myFunction26() {
+
+            //حذف یک یا چند عنصر از آرایه
+            fruits25.splice(0, 1);
+
+            document.getElementById("id26").innerHTML = fruits25;
+
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id27"></p>
+
+    <script>
+
+        const myGirls = ["Cecilie", "Lone"];
+
+        const myBoys = ["Emil", "Tobias", "Linus"];
+
+        //دو آرایه را به هم می چسباند
+        const myChildren = myGirls.concat(myBoys);
+
+        document.getElementById("id27").innerHTML = myChildren;
+
+    </script>
+
+    ***************************************************************************
+
+    <button onclick="myFunction28()">sort</button>
+
+    <p id="id28"></p>
+
+    <script>
+
+        const fruits28 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("id28").innerHTML = fruits28;
+
+        function myFunction28() {
+
+            //آرایه را بصورت صعودی مرتب می کند
+            fruits28.sort();
+
+            document.getElementById("id28").innerHTML = fruits28;
+
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <button onclick="myFunction29()">reverse</button>
+
+    <p id="id29"></p>
+
+    <script>
+
+        // Create and display an array:
+        const fruits29 =
+            ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("id29").innerHTML = fruits29;
+
+        function myFunction29() {
+            // First sort the array
+            fruits29.sort();
+
+            // Then reverse it:
+            fruits29.reverse();
+
+            document.getElementById("id29").innerHTML = fruits29;
+        }
+    </script>
+
+    ***************************************************************************
+
+    <button onclick="myFunction30()">sort numbers asc</button>
+
+    <p id="id30"></p>
+
+    <script>
+
+        const points30 =
+            [40, 100, 1, 5, 25, 10];
+
+        document.getElementById("id30").innerHTML = points30;
+
+        function myFunction30() {
+
+            //مرتب سازی آرایه عددی بصورت صعودی
+            points30.sort(
+                function (a, b) {
+                    return a - b
+                });
+
+            //مرتب سازی آرایه عددی بصورت نزولی
+            // points30.sort(
+            //     function (a, b) { 
+            //         return b - a
+            //      });
+
+            document.getElementById("id30").innerHTML = points30;
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <button onclick="myFunction31()">Sort Alphabetically</button>
+
+    <button onclick="myFunction32()">Sort Numerically</button>
+
+    <p id="id31"></p>
+
+    <script>
+
+        const points31 =
+            [40, 100, 1, 5, 25, 10];
+
+        document.getElementById("id31").innerHTML = points31;
+
+        function myFunction31() {
+
+            //مرتب سازی به روش رشته ای
+            points31.sort();
+
+            document.getElementById("id31").innerHTML = points31;
+        }
+
+        function myFunction32() {
+
+            //مرتب سازی به روش عددی
+            points31.sort(
+                function (a, b) {
+                    return a - b
+                });
+
+            document.getElementById("id31").innerHTML = points31;
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <p>The highest number is <span id="id32"></span>.</p>
+
+    <script>
+
+        const points32 =
+            [40, 100, 1, 5, 25, 10];
+
+        document.getElementById("id32").innerHTML =
+            myArrayMax(points32);
+
+        function myArrayMax(arr) {
+
+            //بیشترین مقدار در آرایه را برمی گرداند
+            return Math.max.apply(null, arr);
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id33"></p>
+
+    <script>
+
+        const numbers1 =
+            [45, 4, 9, 16, 25];
+
+        //تمام عناصر آرایه در عدد 2 ضرب می شوند
+        const numbers2 =
+            numbers1.map(myFunction33);
+
+        document.getElementById("id33").innerHTML = numbers2;
+
+        function myFunction33(value) {
+
+            return value * 2;
+        }
+
+    </script>
+
+    ***************************************************************************
+
+    <p id="id34"></p>
+
+    <script>
+
+        const numbers34 =
+            [45, 4, 9, 16, 25];
+
+        const over18 = numbers34.filter(myFunction34);
+
+        document.getElementById("id34").innerHTML = over18;
+
+        function myFunction34(value, index, array) {
+
+            return value > 18;
+        }
+    </script>
+
+    ***************************************************************************
+
+    <p id="id35"></p>
+
+    <script>
+        const fruit35 = ["Apple", "Orange", "Apple", "Mango"];
+        let position35 = fruit35.indexOf("Apple") + 1;
+
+        document.getElementById("id35").innerHTML =
+             "Apple is found in position " + position35;
+    </script>
+
+    ***************************************************************************
+</body>
+
+</html>

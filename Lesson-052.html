@@ -1,0 +1,273 @@
+/***************************************************************
+
+<!-- **************************************** -->
+<!-- sequence execute functions in JavaScript -->
+<!-- **************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Function Sequence</h2>
+
+    <p>JavaScript functions are executed in the sequence they are called.</p>
+
+    <p id="id1"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("id1").innerHTML = some;
+        }
+
+        function myFirst() {
+            myDisplayer("Hello");
+        }
+
+        function mySecond() {
+            myDisplayer("Goodbye");
+        }
+
+        myFirst();
+        mySecond();
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- **************************************** -->
+<!-- sequence execute functions in JavaScript -->
+<!-- **************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Functions</h2>
+
+    <p>Do a calculation and then display the result.</p>
+
+    <p id="id2"></p>
+
+    <script>
+        function myDisplayer2(some) {
+            document.getElementById("id2").innerHTML = some;
+        }
+
+        function myCalculator2(num1, num2) {
+
+            let sum2 = num1 + num2;
+
+            return sum2;
+        }
+
+        let result2 = myCalculator2(5, 5);
+
+        myDisplayer2(result2);
+    </script>
+
+</body>
+
+</html>
+
+***************************************************************
+
+<!-- **************************************** -->
+<!-- sequence execute functions in JavaScript -->
+<!-- **************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Callbacks</h2>
+
+    <p>Do a calculation and then display the result.</p>
+
+    <p id="id3"></p>
+
+    <script>
+        function myDisplayer3(some) {
+            document.getElementById("id3").innerHTML = some;
+        }
+
+        function myCalculator3(num1, num2) {
+            let sum = num1 + num2;
+
+            myDisplayer3(sum);
+        }
+
+        myCalculator3(5, 5);
+    </script>
+
+</body>
+
+</html>
+
+***************************************************************
+
+<!-- ************************************ -->
+<!-- use callback functions in JavaScript -->
+<!-- ************************************ -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Callbacks</h2>
+
+    <p>Do a calculation and then display the result.</p>
+
+    <p id="id4"></p>
+
+    <script>
+        function myDisplayer4(some) {
+            document.getElementById("id4").innerHTML = some;
+        }
+
+        function myCalculator4(num1, num2, myCallback) {
+
+            let sum = num1 + num2;
+
+            myCallback(sum);
+        }
+
+        myCalculator4(5, 5, myDisplayer4);
+    </script>
+
+</body>
+
+</html>
+
+***************************************************************
+
+<!-- ************************************************** -->
+<!-- use settimeout function for callback in JavaScript -->
+<!-- ************************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Callback</h2>
+
+    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+    <h1 id="id5"></h1>
+
+    <script>
+        setTimeout(myFunction, 3000);
+
+        function myFunction() {
+
+            document.getElementById("id5")
+                .innerHTML = "I love You !!";
+        }
+    </script>
+
+</body>
+
+</html>
+
+***************************************************************
+
+<!-- ************************************************** -->
+<!-- use settimeout function for callback in JavaScript -->
+<!-- ************************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript SetTimeout()</h2>
+
+    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+    <h1 id="id6"></h1>
+
+    <script>
+        setTimeout(function () {
+            myFunction1("I love You !!!");
+        }, 3000);
+
+        function myFunction1(value) {
+            document.getElementById("id6")
+                .innerHTML = value;
+        }
+    </script>
+
+</body>
+
+</html>
+
+**************************************************************
+
+<!-- *************************************************** -->
+<!-- use setinterval function for callback in JavaScript -->
+<!-- *************************************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript setInterval()</h2>
+
+    <p>Using setInterval() to display the time every second (1000 milliseconds).</p>
+
+    <h1 id="id7"></h1>
+
+    <script>
+        setInterval(myFunction, 1000);
+
+        function myFunction() {
+
+            let d = new Date();
+
+            document.getElementById("id7").innerHTML =
+                d.getHours() + ":" +
+                d.getMinutes() + ":" +
+                d.getSeconds();
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- *************************************************** -->
+<!-- Stop setinterval function for callback in JavaScript -->
+<!-- *************************************************** -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Timing</h2>
+
+    <p>A script on this page starts this clock:</p>
+
+    <p id="demo"></p>
+
+    <button onclick="clearInterval(myVar)">Stop time</button>
+
+    <script>
+        let myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+
+</body>
+
+</html> -->

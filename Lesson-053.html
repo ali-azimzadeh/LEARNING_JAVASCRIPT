@@ -1,0 +1,55 @@
+****************************************
+<!-- milti thread  in JavaScript -->
+<!-- **************************************** -->
+
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript setInterval()</h2>
+    <button id="btn1" class="btn" onclick="doCal()">Calculate Payrol</button>
+
+    <button id="btn2" class="btn" onclick="someFunction()">Display Hello World!</button>
+
+    <p>Using setInterval() to display the time every second (1000 milliseconds).</p>
+
+    <h1 id="id7"></h1>
+
+    <script>
+        //   setInterval(myFunction, 1000);
+        //debugger;
+         function doCal() {
+            calculatePayrol();
+        }
+
+        function calculatePayrol() {
+            let myPromise = new Promise(function (myResolve, myReject) {
+                setTimeout(
+                    function () {
+                        for (let i = 0; i < 9000000000; i++) {
+
+                        }
+
+                        myResolve(alert("Calculate is finished"));
+                    }, 1);
+            });
+            //myPromise;
+
+        }
+
+        function someFunction() {
+            let d = new Date();
+
+            document.getElementById("id7").innerHTML =
+                d.getHours() + ":" +
+                d.getMinutes() + ":" +
+                d.getSeconds();
+
+        }
+    </script>
+
+</body>
+
+</html>

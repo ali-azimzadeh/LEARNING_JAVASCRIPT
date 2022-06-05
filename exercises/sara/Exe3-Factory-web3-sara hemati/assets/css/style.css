@@ -1,0 +1,178 @@
+body{
+    direction: rtl;
+}
+
+::placeholder{
+    font-size: 13px;
+    color: rgb(27, 116, 27);
+}
+/* style for table */
+#divTbl{
+    
+     width: 90%;
+     margin: 5px auto 50px;
+     
+}
+.tableScroll{
+    overflow-x:scroll;
+    border: 1px solid rgb(13, 71, 13);
+}
+
+#dataTitle{
+    text-align: center;
+    color:rgb(56 , 122 , 56);
+    margin: auto;
+    margin-bottom: 8px;
+    width: 90%;
+    padding-right: 0;
+    font-weight: bold;
+    font-style: italic;
+
+}
+#tblInfo {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgb(27, 116, 27);
+    
+}
+#birthDate{
+    background-color: white;
+}
+#tblInfo tr th {
+background-color: #519351;
+border: 1px solid rgb(33,90,33);
+color: white;
+}
+
+#tblInfo td, #tblInfo th{
+    text-align: right;
+    min-width: 165px;
+    padding: 10px;
+}
+#tblInfo tr:nth-child(odd){
+    background-color: rgb(140,197,104);
+}
+#tblInfo tr:nth-child(even){
+    background-color:rgb(175,211,106);
+}
+#tblInfo tr:hover{
+    background-color: rgb(205, 229 ,69);
+}
+#tblInfo td{
+    border: 1px solid #e6e2e2;
+}
+/* End of style for table */
+fieldset{
+    margin: 50px 100px;
+    padding-bottom: 20px;
+    text-align: right;
+    padding-right: 20px;
+}
+legend{
+    width: 180px;
+    text-align: right;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+.form-control{
+    width: 17%;
+    margin: 10px 0px 10px 10px;
+    display: inline;
+}
+#salary{
+    margin-left: 0;
+}
+textarea.form-control {
+    width: 40%;
+    height: 39px;
+    margin-bottom: -13px;
+}
+/*  */
+#frmPerson > div:first-child > div ,
+#frmPerson > div:last-child > div {
+    width: 20%;
+    display: inline;
+}
+#frmPerson > div:first-child > div:nth-child(2){
+    margin-right: 5%;
+}
+#frmPerson > div:first-child > div:nth-child(3){
+    margin-right: 1%;
+}
+#frmPerson > div:first-child > div:nth-child(4){
+    margin-right: 2%;
+}
+#frmPerson > div:first-child #natCode{
+    width: 16%;
+}
+#frmPerson > div:last-child #salary{
+    width: 15%;
+    
+}
+#frmPerson > div:last-child div:last-child button{
+   margin-right: 40px;
+   margin-top: -5px;
+}
+
+ #frmPerson > div:nth-child(3) > div {
+    width: 15%;
+    display: inline;
+}
+
+#frmPerson > div:nth-child(2) > div:first-child{
+    width: 15%;
+    display: inline;
+}
+#frmPerson > div:nth-child(2) > div:nth-child(2){
+    width: 15%;
+    display: inline;
+    margin-right: 3%;
+}
+#frmPerson > div:nth-child(2) > div:last-child{
+    margin-right: 10px;
+}
+#frmPerson > div:nth-child(2) .form-control
+ {
+    width: 15%;
+    margin-left:5px;
+}
+#frmPerson > div:nth-child(3) .form-control 
+{
+    width: 15%;
+}
+#frmPerson > div:nth-child(2) textarea.form-control
+{
+    width: 40%;
+}
+#frmPerson > div:nth-child(3) textarea.form-control
+{
+    width: 40%;
+    margin-right: 1%;
+}
+#frmPerson > div:nth-child(2) > div:last-child {
+    width: 50%;
+    display: inline;
+}
+/*  */
+.divValid{
+
+    position: relative;
+}
+.gender{
+    width:130px;
+}
+.validtxt{
+    color: red;
+    font-size: 11px;
+    position: absolute;
+    top: 29px;
+    right: 10px;
+}
+
+#factManagF , #factManagL{
+    width: 190px;
+}
+#factAdd{
+    width: 30%;
+}
+/* End of form */

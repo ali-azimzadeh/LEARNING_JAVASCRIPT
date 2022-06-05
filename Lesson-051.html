@@ -1,0 +1,351 @@
+/***************************************************************
+
+<!-- ********************* -->
+<!-- Classes in JavaScript -->
+<!-- ********************* -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Class</h2>
+
+    <p>How to use a JavaScript Class.</p>
+
+    <p id="id1"></p>
+
+    <script>
+
+        class Person {
+
+            constructor(name, age) {
+
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        const myPerson = new Person("Ali", 40);
+
+        document.getElementById("id1").innerHTML =
+            myPerson.name + " " + myPerson.age;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ****************************** -->
+<!-- Methods in class in JavaScript -->
+<!-- ****************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Class Method</h2>
+
+    <p>How to define and use a Class method.</p>
+
+    <p id="id2"></p>
+
+    <script>
+        class Car {
+
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+
+            }
+
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        let myCar = new Car("Ford", 2014);
+
+        document.getElementById("id2").innerHTML =
+            "My car is " + myCar.age() + " years old.";
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- *********************************** -->
+<!-- Before Arrow Function in JavaScript -->
+<!-- *********************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Class Method</h2>
+
+    <p>Pass a parameter into the "age()" method.</p>
+
+    <p id="id3"></p>
+
+    <script>
+        class Car3 {
+            constructor(name, year) {
+
+                this.name = name;
+                this.year = year;
+            }
+
+            age(x) {
+                return x - this.year;
+            }
+        }
+
+        let date = new Date();
+
+        let year = date.getFullYear();
+
+        let myCar3 = new Car3("Ford", 2014);
+
+        document.getElementById("id3").innerHTML =
+            "My car is " + myCar3.age(year) + " years old.";
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ******************************* -->
+<!-- Class Inheritance in JavaScript -->
+<!-- ******************************* -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Class Inheritance</h2>
+
+    <p>Use the "extends" keyword to inherit all methods from another class.</p>
+    <p>Use the "super" method to call the parent's constructor function.</p>
+
+    <p id="id4"></p>
+
+    <script>
+        class Car4 {
+            constructor(brand) {
+                this.carname = brand;
+            }
+
+            present() {
+
+                let result =
+                    'I have a ' + this.carname;
+
+                return result;
+            }
+        }
+
+        class Model extends Car4 {
+
+            constructor(brand, model) {
+
+                super(brand);
+
+                this.model = model;
+            }
+
+            show() {
+
+                let result =
+                    this.present() + ', it is a ' + this.model;
+
+                return result;
+            }
+        }
+
+        let myCar4 = new Model("Ford", "Mustang");
+        document.getElementById("id4").innerHTML = myCar4.show();
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ******************************* -->
+<!-- Getters & Setters in JavaScript -->
+<!-- ******************************* -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Class Gettter/Setter</h2>
+
+    <p>A demonstration of how to add getters and setters in a class, and how to use the getter to get the property
+        value.</p>
+
+    <p id="id5"></p>
+
+    <script>
+        class Car5 {
+            constructor(brand) {
+                this._carname = brand;
+            }
+
+            get carName() {
+                return this._carname;
+            }
+
+            set carName(x) {
+                this._carname = x;
+            }
+        }
+
+        let myCar5 = new Car5("Ford");
+
+        document.getElementById("id5")
+            .innerHTML = myCar5.carName;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ******************************** -->
+<!-- Set property value in JavaScript -->
+<!-- ******************************** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Class Setter</h2>
+
+    <p>When using a setter to set a property value, you do not use parantheses.</p>
+
+    <p id="id6"></p>
+
+    <script>
+        class Car6 {
+            constructor(brand) {
+
+                this._carname = brand;
+            }
+
+            set carname(x) {
+                this._carname = x;
+            }
+
+            get carname() {
+                return this._carname;
+            }
+        }
+
+        let myCar6 = new Car6("Ford");
+
+        myCar6.carname = "Volvo";
+
+        document.getElementById("id6")
+            .innerHTML = myCar6.carname;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************* -->
+<!-- classes is not hoisting in JavaScript -->
+<!-- ************************************* -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Classes are not hoisted</h2>
+
+    <p>You will get an error if you try to use a class before it is declared.</p>
+
+    <p id="id7"></p>
+
+    <script>
+        //You cannot use the class yet.
+        myCar7 = new Car("Ford")
+        //This would raise an error.
+
+        class Car7 {
+            constructor(brand) {
+                this.carname = brand;
+            }
+        }
+
+        //Now you can use the class:
+        // let myCar7 = new Car7("Ford")
+
+        document.getElementById("id7")
+            .innerHTML = myCar7.carname;
+    </script>
+
+</body>
+
+</html>
+
+/***************************************************************
+
+<!-- ************************************* -->
+<!-- classes  static methods in JavaScript -->
+<!-- ************************************* -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Class Static Methods</h2>
+
+    <p>A static method is created with the "static" keyword, and you can only call the method on the class itself.</p>
+
+    <p id="id8"></p>
+
+    <script>
+        class Car8 {
+            constructor(name) {
+                this.name = name;
+            }
+            static hello() {
+                return "Hello!!";
+            }
+        }
+
+        let myCar8 = new Car8("Ford");
+
+        //You can call 'hello()' on the Car Class:
+        document.getElementById("id8")
+            .innerHTML = Car8.hello();
+
+// But NOT on  a Car Object:
+// document.getElementById("id8").innerHTML = myCar8.hello();
+// this will raise an error.
+    </script>
+
+</body>
+
+</html>

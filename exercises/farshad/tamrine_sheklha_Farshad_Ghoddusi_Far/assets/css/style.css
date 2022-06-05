@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: pink;
+}
+
+.container {
+    margin: 60px auto;
+    width: 65%;
+    text-align: center;
+}
+
+.container h1,
+h2,
+h3,
+p {
+    line-height: 40px;
+}
+
+.them_1 {
+    border: 2px solid black;
+    margin-left: 28%;
+    margin-bottom: 70px;
+}
+
+.myForm {
+    text-align: left;
+}
+
+legend {
+    background-color: lightgreen;
+    margin-left: 35px;
+}
+
+fieldset label {
+    margin-left: 20px;
+}
+
+fieldset button {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.myButton1 {
+    padding: 5px 35px;
+    margin: 5px 0 20px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.myYellowGreen {
+    background-color: yellowgreen;
+}
+
+.myRed {
+    background-color: red;
+}
+
+.myBlue {
+    background-color: blueviolet;
+}
+
+.myGreen {
+    background-color: green;
+    ;
+}
+
+.redText {
+    color: red;
+    font-weight: bold;
+}
+
+#shapeInformation {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+#myShapeTypeLabel_2,
+#length2 {
+    display: none;
+}
